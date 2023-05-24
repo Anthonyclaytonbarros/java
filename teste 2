@@ -1,0 +1,53 @@
+import java.util.Scanner; 
+
+
+public class SomaElementosAnteriores { 
+
+    public static void main(String[] args) { 
+
+        Scanner input = new Scanner(System.in); 
+
+  
+
+        // Solicita o primeiro elemento do vetor 
+
+        System.out.print("Digite o primeiro elemento do vetor: "); 
+
+        int primeiro = input.nextInt(); 
+
+  
+
+        // Cria o vetor com 10 elementos 
+
+        int[] vetor = new int[10]; 
+
+  
+
+        // Atribui o primeiro elemento ao vetor 
+
+        vetor[0] = primeiro; 
+
+  
+
+        // Preenche os demais elementos do vetor com a soma dos elementos  
+
+        // anteriores 
+
+        for (int i = 1; i < vetor.length; i++) { 
+
+            vetor[i] = vetor[i - 1] *2; 
+        } 
+
+        // Imprime o vetor 
+
+        for (int i = 0; i < 10; i++) { 
+
+            System.out.print(vetor[i] + vetor[i]); 
+
+            } 
+
+ 
+
+    } 
+
+} 
