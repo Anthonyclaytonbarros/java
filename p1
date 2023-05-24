@@ -1,0 +1,45 @@
+public class xablau {
+    public static void main(String[] args) {
+        double[] a = {1.0, 2.0, 3.0, 4.0};
+        double[] b = {5.0, 6.0, 7.0, 8.0};
+        double[] c = {9.0, 10.0, 11.0, 12.0}; 
+        double[] d = {13.0, 14.0, 15.0, 16.0};
+        String[] op = {"s", "u", "m", "s"}; 
+
+        double[][] m = new double[2][op.length];
+
+        for (int i = 0; i < op.length; i++) {
+            String operacao = op[i];
+            double resultado1, resultado2;
+
+            switch (operacao) {
+                case "s":
+                    resultado1 = a[i] + c[i];
+                    resultado2 = b[i] + d[i];
+                    break;
+                case "u":
+                    resultado1 = a[i] - c[i];
+                    resultado2 = b[i] - d[i];
+                    break;
+                case "m":
+                    resultado1 = a[i] * c[i] - b[i] * d[i];
+                    resultado2 = a[i] * d[i] + b[i] * c[i];
+                    break;
+                default:
+                    resultado1 = 0.0;
+                    resultado2 = 0.0;
+                    break;
+            }
+
+            m[0][i] = resultado1;
+            m[1][i] = resultado2;
+        }
+
+        System.out.println("Respostas:");
+
+        for (int i = 0; i < op.length; i++) {
+            System.out.println("m[0][" + i + "] = " + m[0][i]);
+            System.out.println("m[1][" + i + "] = " + m[1][i]);
+        }
+    }
+}
